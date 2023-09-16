@@ -1,0 +1,22 @@
+import main.AcaoII;
+import main.Corretora;
+import main.Investidor;
+
+public class OrdemCorretora {
+
+	public static void main(String[] args) {
+		
+		Corretora c = new Corretora();
+		
+		AcaoII a1 = new AcaoII("Nome tal", 19.9, 0.0, 30.0, 100);
+		AcaoII a2 = new AcaoII("Nome qualquer", 29.9, 1.0, 20.0, 30);
+		
+		Investidor i1 = new Investidor(1240125, "Davi Gomes", 10000.0);
+		Investidor i2 = new Investidor(1295862, "Mr. Rocha", 10000.0);
+		
+		c.enviarOrdem(a1, i1);
+		c.enviarOrdem(a2, i2);
+		
+		c.exibirOrdens();
+	}
+}
