@@ -1,0 +1,21 @@
+package classes;
+public class AcaoII extends Acao {
+
+    private int Cotas;
+    private Local local;
+
+    public AcaoII(String Nome, double Preco, int Cotas, Local local) {
+        super(Nome, Preco);
+        this.Cotas = cotas;
+        this.local = local;
+    }
+
+    @Override
+    public double CalcValor() {
+        return getPreco() * Cotas;
+    }
+
+    public Local getLocal(){
+        return local;
+    }
+}
